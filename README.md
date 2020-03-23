@@ -78,3 +78,23 @@ useEffect(() => {
 
 
 PROJECT HERE: https://github.com/Michael-Bailar/React-Testing-TV-Show
+
+
+/*
+
+    ) test the api call to make sure it's getting data
+      -result is equal to test result
+
+    ) test the page to ensure all elements are present
+      -show image(loads), title(contains "Stranger Things), description(contains "A love letter to the '80s classic")
+      -dropdown(text should be "Select a season")
+
+    ) test the dropdown to make sure it renders data to the dom
+      -not testing as it's a custom library
+
+    ) test the episodes element to make sure it's loading data correctly. 
+      - given some data, it renders. 
+
+
+
+*/
