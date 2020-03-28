@@ -16,22 +16,22 @@ Get the project fired up and start using it as a user would. Try to go through t
 
 ### Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd React-Testing-TV-Show`
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your team lead as collaborator on Github.
+- [x] Clone your OWN version of the repository in your terminal
+- [x] CD into the project base directory `cd React-Testing-TV-Show`
+- [x] Download project dependencies by running `npm install`
+- [x] Start up the app using `npm start`
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into master.
-- [ ] Do your magic!
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete by merging the branch back into master.
+- [x] Do your magic!
 
 ### Instructions and/or completion requirements
 
@@ -42,11 +42,11 @@ Your challenge for this module: write tests for both the `App.js` component and 
 The async call being inside the component makes it hard to test the asynchronous nature of the component. Let's move the async function into an `/api` directory so we can easily mock that function and make the async tests easier.
 
 1. Create a directory called `/api` in the `src` directory
-1. Create a file inside `/api` called `fetchShow.js`
-1. Move `fetchShow` into that new file and export it (fetchShow is in the `useEffect` - pay attention to how this was setting state. You will still need to set state in this effect hook the exact same way...)
-1. Import `fetchShow` into `App.js` so you can make your async call from your `useEffect` hook.
-1. You will need to `return` the `axios.get` call, _and_ the data inside your `.then()`. This is necessary because when you call `fetchShow` in your useEffect, you need to chain off the promise for a new `.then()`, then you need the data to be returned once the promise is resolved
-1. Inside your `.then()` in the `useEffect` hook, set your data again.
+2. Create a file inside `/api` called `fetchShow.js`
+3. Move `fetchShow` into that new file and export it (fetchShow is in the `useEffect` - pay attention to how this was setting state. You will still need to set state in this effect hook the exact same way...)
+4. Import `fetchShow` into `App.js` so you can make your async call from your `useEffect` hook.
+5. You will need to `return` the `axios.get` call, _and_ the data inside your `.then()`. This is necessary because when you call `fetchShow` in your useEffect, you need to chain off the promise for a new `.then()`, then you need the data to be returned once the promise is resolved
+6. Inside your `.then()` in the `useEffect` hook, set your data again.
 
 - Note that you need `axios` in the new file
 
@@ -75,3 +75,26 @@ useEffect(() => {
 - Look up the `TVMaze` API. Add a dropdown with the titles of some other popular shows. Add the user sequence of choosing a different show to fetch data for different shows.
 
 - Add React Router, and add the functionality to click an episode and navigate to an episode page.
+
+
+PROJECT HERE: https://github.com/Michael-Bailar/React-Testing-TV-Show
+
+
+/*
+
+    ) test the api call to make sure it's getting data
+      -result is equal to test result
+
+    ) test the page to ensure all elements are present
+      -show image(loads), title(contains "Stranger Things), description(contains "A love letter to the '80s classic")
+      -dropdown(text should be "Select a season")
+
+    ) test the dropdown to make sure it renders data to the dom
+      -not testing as it's a custom library
+
+    ) test the episodes element to make sure it's loading data correctly. 
+      - given some data, it renders. 
+
+
+
+*/
